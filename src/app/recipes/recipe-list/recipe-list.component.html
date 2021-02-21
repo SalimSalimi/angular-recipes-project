@@ -5,17 +5,7 @@
 </div>
 <div class="row">
   <div class="col-12">
-      <a href="#" class="list-group-item list-group-item-action  list-group-item-info clearfix" *ngFor="let recipe of recipes;">
-        <div class="float-left">
-          <h4>{{ recipe.name }}</h4>
-          <p>{{ recipe.description }}</p>
-        </div>
-        <span class="float-right">
-        <img [src]="recipe.imagePath" alt="" class="img-fluid" style="max-height: 50px;">
-      </span>
-      </a>
-
-    <app-recipe-item></app-recipe-item>
+    <app-recipe-item *ngFor="let recipeEl of recipes" [recipe]="recipeEl"></app-recipe-item>
   </div>
 </div>
 
