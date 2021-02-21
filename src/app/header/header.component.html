@@ -9,11 +9,17 @@
         <li class="nav-item" (click)="onSelect('shopping-list')"><a class="nav-link" href="#">Shopping List</a></li>
       </ul>
       <ul class="nav navbar-nav ml-auto">
-        <a href="#" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
-        <li class="dropdown">
+        <li class="dropdown" appDropdown>
+          <a href="#"
+             role="button"
+             class="dropdown-toggle"
+             data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            Manage <span class="caret"></span>
+          </a>
           <ul class="dropdown-menu">
-            <li><a href="#">Save Data</a></li>
-            <li><a href="#">Fetch Data</a></li>
+            <li><a class="dropdown-item" href="#">Save Data</a></li>
+            <li><a class="dropdown-item" href="#">Fetch Data</a></li>
           </ul>
         </li>
       </ul>
