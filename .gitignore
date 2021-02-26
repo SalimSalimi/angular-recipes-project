@@ -46,5 +46,5 @@ testem.log
 Thumbs.db
 
 # Config
-./src/app/auth/config/config.ts
+src/app/auth/config/
 
