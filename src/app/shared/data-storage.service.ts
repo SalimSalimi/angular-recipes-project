@@ -30,27 +30,7 @@ export class DataStorageService {
   }
 
   fetchRecipes() {
-    // take method with value 1 = it takes only 1 value of subscription and it's unsubscribe by itself
-    return this.authService.user.pipe(take(1), exhaustMap(user => {
-      return this.http.get<Recipe[]>(this.RECIPES_URL,
-        {
-          params: new HttpParams().set('auth', user.token ? user.token: '')
-        })
-    }), map(recipes => {
-        return recipes.map(recipe => {
-          return {
-            ...recipe,
-            ingredients: recipe.ingredients ?
-              recipe.ingredients : []
-          }
-        });
-      }),
-      tap(recipes => {
-        this.recipeService.setRecipes(recipes)
-      }));
-
-    // Old version
-    /*return this.http.get<Recipe[]>(this.RECIPES_URL)
+    return this.http.get<Recipe[]>(this.RECIPES_URL)
       .pipe(
         map(recipes => {
           return recipes.map(recipe => {
@@ -63,6 +43,6 @@ export class DataStorageService {
         }),
         tap(recipes => {
           this.recipeService.setRecipes(recipes)
-        }));*/
+        }));
   }
 }
