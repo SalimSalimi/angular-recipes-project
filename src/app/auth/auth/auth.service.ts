@@ -102,4 +102,9 @@ export class AuthService {
     }
     return throwError(errorMessage);
   }
+
+  logOut() {
+    // @ts-ignore
+    this.user.next(null);
+  }
 }
