@@ -4,6 +4,7 @@ import {catchError, tap} from "rxjs/operators";
 import {BehaviorSubject, Subject, throwError} from "rxjs";
 import {User} from "./user.model";
 import {Router} from "@angular/router";
+import {Config} from "../config/config";
 
 export interface AuthResponseData {
   kind: string;
@@ -20,7 +21,7 @@ export interface AuthResponseData {
 })
 export class AuthService {
   private BASE_AUTH = 'https://identitytoolkit.googleapis.com/v1/accounts';
-  private API_KEY = 'AIzaSyA7sbkPEbumREa2aEWTQy2fpBkC2Yw2lDc';
+  private API_KEY = Config.FIREBASE_AUTH_KEY;
   private SIGN_UP_AUTH_ENDPOINT = this.BASE_AUTH + ':signUp?key=' + this.API_KEY;
   private SIGN_IN_AUTH_ENDPOINT = this.BASE_AUTH + ':signInWithPassword?key=' + this.API_KEY;
 
