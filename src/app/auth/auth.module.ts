@@ -1,5 +1,5 @@
 import {NgModule} from "@angular/core";
-import {AuthComponent} from "./auth/auth.component";
+import {AuthComponent} from "./auth.component";
 import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";

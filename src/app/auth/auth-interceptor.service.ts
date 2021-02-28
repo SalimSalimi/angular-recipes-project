@@ -3,7 +3,7 @@ import {HttpEvent, HttpHandler, HttpInterceptor, HttpParams, HttpRequest} from "
 import {Observable} from "rxjs";
 import {AuthService} from "./auth.service";
 import {exhaustMap, take} from "rxjs/operators";
-import {Recipe} from "../../recipes/recipe.model";
+import {Recipe} from "../recipes/recipe.model";
 
 @Injectable()
 export class AuthInterceptorService implements HttpInterceptor {
