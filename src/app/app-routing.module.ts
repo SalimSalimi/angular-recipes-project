@@ -14,7 +14,22 @@ const appRoutes: Routes = [
       import('./recipes/recipes.module').then(m =>
         m.RecipesModule)
 
+  },
+  // Lazy loading of ShoppingListModule
+  {
+    path: 'shopping-list',
+    loadChildren: () =>
+      import('./shopping-list/shopping-list.module').then(m =>
+        m.ShoppingListModule)
+  },
+  // Lazy loading of AuthModule
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./auth/auth.module').then(m =>
+        m.AuthModule)
   }
+
 ]
 
 @NgModule({
