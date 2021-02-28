@@ -8,6 +8,7 @@ import {RecipeEditComponent} from "./recipe-edit/recipe-edit.component";
 import {RouterModule} from "@angular/router";
 import {CommonModule} from "@angular/common";
 import {ReactiveFormsModule} from "@angular/forms";
+import {RecipesRoutingModule} from "./recipes-routing.module";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     // Access to ngIf, ngFor instead of BrowserModule
     // because BrowserModule should be only in AppModule
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RecipesRoutingModule
   ],
   exports: [
     RecipesComponent,
